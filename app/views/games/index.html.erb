@@ -1,28 +1,32 @@
-<p style="color: green"><%= notice %></p>
+<div class='main-container'>
+  <p style="color: green"><%= notice %></p>
+  <h1>Games</h1>
+    <div class='button'>
+      <%= button_to "New game", new_game_path %>
+    </div>
 
-<h1>Games</h1>
-
-<table id="games">
-  <tr>
-    <th>Title</th>
-    <th>Platform</th>
-    <th>Release</th>
-    <th>Developer</th>
-    <th></th>
-  </tr>
-  <% @games.each do |game| %>
-    <tr>
-    <%= render partial: "gametable", locals: {game: game} %>
-    <td>
-      <%= link_to "Show", game %>
-    </td>
-    <td>
-      <%= link_to "Edit", edit_game_path(game) %>
-    </td>
-    <td>
-    <%= link_to "Delete", game, method: :delete, data: {confirm:"Are you sure?"} %>
-    </tr>
-    <% end %>
-</table>
-
-<%= link_to "New game", new_game_path %>
+  <div class='table-container'>
+    <table id="games">
+      <tr>
+        <th>Title</th>
+        <th>Platform</th>
+        <th>Release</th>
+        <th>Developer</th>
+        <th></th>
+      </tr>
+      <% @games.each do |game| %>
+        <tr>
+        <%= render partial: "gametable", locals: {game: game} %>
+        <td>
+          <%= button_to "Show", game %>
+        </td>
+        <td>
+          <%= button_to "Edit", edit_game_path(game) %>
+        </td>
+        <td>
+        <%= button_to "Delete", game, method: :delete, data: {confirm:"Are you sure?"} %>
+        </tr>
+        <% end %>
+    </table>
+  </div>
+</div>

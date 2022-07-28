@@ -85,3 +85,31 @@ body {
 }
 
 /* End Navbar SCSS */
+
+
+.main-container {
+  margin: 5%;
+
+  h1, h2 {
+    text-align: center;
+    align-content: center;
+  }
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
