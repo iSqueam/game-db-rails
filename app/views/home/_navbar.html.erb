@@ -1,0 +1,24 @@
+<div class='navcontainer'>
+  <div class='sitenav'>
+    <%= link_to 'GameDB', root_path, class: current_page?(root_path)? "active":"" %>
+    <%= link_to 'Games', games_path, class: current_page?(games_path)? "active":"" %>
+    <%= link_to 'About', home_about_path, class: current_page?(home_about_path)? "active":"" %>
+  </div>
+
+  <div class='loggeduser'>
+      <%if user_signed_in? %>
+      <%= current_user.email %>
+      <% end %>
+  </div>
+
+  <div class='usernav'>
+    <% if user_signed_in? %>
+      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+      <%= link_to 'Edit Profile', edit_user_registration_path, class: current_page?(edit_user_registration_path)? "active":"" %>
+    <% else %>
+      <%= link_to "Login", new_user_session_path, class: current_page?(new_user_session_path)? "active":"" %>
+      <%= link_to "Sign up", new_user_registration_path, class: current_page?(new_user_registration_path)? "active":"" %>
+      <% end %>
+  </div>
+</div>
+</br></br>
