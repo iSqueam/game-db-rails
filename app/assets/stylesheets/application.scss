@@ -18,6 +18,8 @@ body {
   margin: auto;
 }
 
+
+/* Begin Navbar SCSS */
 .navcontainer {
     position: fixed;
     display: inline-grid;
@@ -81,3 +83,5 @@ body {
     background-color: black;
   }
 }
+
+/* End Navbar SCSS */
