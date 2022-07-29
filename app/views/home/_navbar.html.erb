@@ -14,11 +14,10 @@
   <div class='usernav'>
     <% if user_signed_in? %>
       <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-      <%= link_to 'Edit Profile', edit_user_registration_path, class: current_page?(edit_user_registration_path)? "active":"" %>
+      <%= link_to 'Edit', edit_user_registration_path, class: current_page?(edit_user_registration_path)? "active":"" %>
     <% else %>
       <%= link_to "Login", new_user_session_path, class: current_page?(new_user_session_path)? "active":"" %>
-      <%= link_to "Sign up", new_user_registration_path, class: current_page?(new_user_registration_path)? "active":"" %>
+      <%= link_to "Join", new_user_registration_path, class: current_page?(new_user_registration_path)? "active":"" %>
       <% end %>
   </div>
 </div>
-</br></br>

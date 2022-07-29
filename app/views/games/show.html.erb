@@ -1,12 +1,10 @@
-<div class='main-container'>
-  <p style="color: green"><%= notice %></p>
+<p style="color: green"><%= notice %></p>
 
-  <%= render @game %>
+<%= render @game %>
 
-  <div>
-    <%= link_to "Edit this game", edit_game_path(@game) %> |
-    <%= link_to "Back to games", games_path %>
+<div>
+  <%= link_to "Edit this game", edit_game_path(@game) %> |
+  <%= link_to "Back to games", games_path %>
 
-    <%= button_to "Remove this Game", @game, method: :delete %>
-  </div>
+  <%= button_to "Remove this Game", @game, method: :delete %>
 </div>
